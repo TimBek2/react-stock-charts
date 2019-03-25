@@ -12,16 +12,14 @@ export default class StockTickerForm extends Component {
       console.log('State:', this.state);
     }
 
-    const handleSubmit = () => {
+    const handleSubmit = (e) => {
+      e.preventDefault();
       console.log('State on submit:', this.state);
     }
 
     return (
       <div>
         <h3>Gimme a stock ticker</h3>
-        <p>
-          If you need help finding a ticker, try looking <a href="https://finance.yahoo.com/lookup/">here</a>
-        </p>
 
         <form onSubmit={handleSubmit}>
           <label>Ticker Symbol:
@@ -29,6 +27,10 @@ export default class StockTickerForm extends Component {
           </label>
           <input type="submit" value="Enter" />
         </form>
+
+        <p>
+          If you need help finding a ticker, try looking <a href="https://finance.yahoo.com/lookup/">here</a>
+        </p>
       </div>
     )
   }
