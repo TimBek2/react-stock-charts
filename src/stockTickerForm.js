@@ -9,12 +9,12 @@ export default class StockTickerForm extends Component {
   render() {
     const handleChange = (e) => {
       this.setState({ stockTicker: e.target.value })
-      console.log('State:', this.state);
     }
 
     const handleSubmit = (e) => {
       e.preventDefault();
       console.log('State on submit:', this.state);
+      console.log('env:', process.env.REACT_APP_ALPHA_VANTAGE_API_KEY);
     }
 
     return (
