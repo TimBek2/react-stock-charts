@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-// import { ALPHA_VANTAGE_API_KEY } from './lib/constants';
+import StockChart from './StockChart';
+
 
 export default class ChartList extends Component {
   static propTypes = {
@@ -8,9 +9,18 @@ export default class ChartList extends Component {
   }
 
   render() {
-    console.log(this.props.tickers)
+    const {tickers} = this.props;
+
     return (
-      <h4>Stock Charts</h4>
+      <div className="tickers-wrapper">
+        <h4>Stock Charts</h4>
+
+        { tickers.length > 0 &&
+          tickers.map(ticker =>
+            <StockChart ticker={ticker} />
+          )
+        }
+      </div>
     )
   }
 }
