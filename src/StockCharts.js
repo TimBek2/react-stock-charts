@@ -10,19 +10,20 @@ export default class StockCharts extends Component {
     }
   }
 
-  render() {
-    const handleTickerSubmit = (e) => {
-      e.preventDefault();
+  handleTickerSubmit = (e, value) => {
+    e.preventDefault();
 
-      this.setState({ tickers: [...this.state.tickers, e.target.value] })
-      console.log('State on submit:', this.state);
-    }
+    this.setState({ tickers: [...this.state.tickers, value] })
+    console.log('State on submit:', this.state);
+  }
+
+  render() {
 
     return (
       <div className="content">
         <h1 className="header">Stock Charts App</h1>
         <StockTickerForm
-          handleSubmit={handleTickerSubmit}/>
+          handleSubmit={this.handleTickerSubmit}/>
         <ChartList
           tickers={this.state.tickers}
         />

@@ -21,7 +21,7 @@ export default class StockTickerForm extends Component {
       <div>
         <h5>Gimme a stock ticker</h5>
 
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={(e) => handleSubmit(e, this.state.stockTicker)}>
           <label>Ticker Symbol:
             <input type="text" onChange={handleChange} />
           </label>
