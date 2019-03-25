@@ -1,11 +1,17 @@
 .App {
   text-align: center;
+
+  .footer {
+    background-color: slategray;
+    bottom: 0;
+    position: absolute;
+    height: 45px;
+    line-height: 45px;
+    width: 100%;
+  }
 }
 
-.header {
-  background-color: slategray;
-  height: 45px;
-}
+
 
 @keyframes App-logo-spin {
   from {

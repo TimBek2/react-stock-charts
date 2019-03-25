@@ -8,6 +8,13 @@ export default class StockTickerForm extends Component {
         <p>
           If you need help finding a ticker, try looking <a href="https://finance.yahoo.com/lookup/">here</a>
         </p>
+
+        <form>
+          <label>Ticker Symbol:
+            <input type="text" />
+          </label>
+          <input type="submit" value="Enter" />
+        </form>
       </div>
     )
   }
