@@ -6,6 +6,19 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  .header {
+    text-align: center;
+  }
+
+  .footer {
+    background-color: slategray;
+    bottom: 0;
+    position: absolute;
+    height: 45px;
+    line-height: 45px;
+    width: 100%;
+  }
 }
 
 code {
