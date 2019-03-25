@@ -1,14 +1,15 @@
-import React, { Component } from 'React';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+// import { ALPHA_VANTAGE_API_KEY } from './lib/constants';
 
 export default class ChartList extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { stockTickers: [] }
+  static propTypes = {
+    tickers: PropTypes.array
   }
 
   render() {
     return (
-      <p>hello there</p>
+      <h4>Stock Charts</h4>
     )
   }
 }

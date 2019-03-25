@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { ALPHA_VANTAGE_API_KEY } from './lib/constants'
 
 export default class StockTickerForm extends Component {
   constructor(props) {
@@ -15,12 +14,11 @@ export default class StockTickerForm extends Component {
     const handleSubmit = (e) => {
       e.preventDefault();
       console.log('State on submit:', this.state);
-      console.log('key:', ALPHA_VANTAGE_API_KEY)
     }
 
     return (
       <div>
-        <h3>Gimme a stock ticker</h3>
+        <h5>Gimme a stock ticker</h5>
 
         <form onSubmit={handleSubmit}>
           <label>Ticker Symbol:
