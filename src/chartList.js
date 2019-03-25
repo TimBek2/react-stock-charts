@@ -8,6 +8,7 @@ export default class ChartList extends Component {
   }
 
   render() {
+    console.log(this.props.tickers)
     return (
       <h4>Stock Charts</h4>
     )

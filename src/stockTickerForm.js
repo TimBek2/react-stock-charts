@@ -3,27 +3,21 @@ import PropTypes from 'prop-types';
 
 export default class StockTickerForm extends Component {
   static propTypes = {
-    handleSubmit: PropTypes.func.isRequired
-  }
-
-  constructor(props) {
-    super(props);
-    this.state = { stockTicker: '' }
+    handleSubmit: PropTypes.func.isRequired,
+    handleTickerUpdate: PropTypes.func.isRequired,
+    stockTicker: PropTypes.string
   }
 
   render() {
-    const {handleSubmit} = this.props;
-    const handleChange = (e) => {
-      this.setState({ stockTicker: e.target.value })
-    }
+    const {handleSubmit, handleTickerUpdate} = this.props;
 
     return (
       <div>
         <h5>Gimme a stock ticker</h5>
 
-        <form onSubmit={(e) => handleSubmit(e, this.state.stockTicker)}>
+        <form onSubmit={(e) => handleSubmit(e, this.props.stockTicker)}>
           <label>Ticker Symbol:
-            <input type="text" onChange={handleChange} />
+            <input type="text" value={this.props.stockTicker} onChange={(e) => handleTickerUpdate(e.target.value)} />
           </label>
           <input type="submit" value="Enter" />
         </form>
