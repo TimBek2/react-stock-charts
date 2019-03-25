@@ -14,7 +14,7 @@ export default class StockCharts extends Component {
     const handleTickerSubmit = (e) => {
       e.preventDefault();
 
-      // this.setState({})
+      this.setState({ tickers: [...this.state.tickers, e.target.value] })
       console.log('State on submit:', this.state);
     }
 
