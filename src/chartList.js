@@ -1,26 +1,18 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
 import StockChart from './StockChart';
 
+const ChartList = (props) => {
+  return (
+    <div className="charts-wrapper">
+      <h4>Stock Charts</h4>
 
-export default class ChartList extends Component {
-  static propTypes = {
-    tickers: PropTypes.array
-  }
-
-  render() {
-    const {tickers} = this.props;
-
-    return (
-      <div className="tickers-wrapper">
-        <h4>Stock Charts</h4>
-
-        { tickers.length > 0 &&
-          tickers.map(ticker =>
-            <StockChart ticker={ticker} />
-          )
-        }
-      </div>
-    )
-  }
+      { props.tickers.length > 0 &&
+        props.tickers.map(ticker =>
+          <StockChart key={ticker} ticker={ticker} />
+        )
+      }
+    </div>
+  )
 }
+
+export default ChartList;
