@@ -24,7 +24,7 @@ export default class StockCharts extends Component {
   render() {
 
     return (
-      <div className='body'>
+      <div>
         <div className='content'>
           <h1 className='header'>Stock Charts App</h1>
           <StockTickerForm
