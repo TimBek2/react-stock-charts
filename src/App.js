@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import StockCharts from './StockCharts'
+import StockCharts from './chartComponents/StockCharts'
 
 class App extends Component {
   render() {

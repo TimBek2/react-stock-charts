@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import StockTickerForm from './StockTickerForm';
+import StockTickerForm from '../StockTickerForm';
 import ChartList from './ChartList';
 
 export default class StockCharts extends Component {
