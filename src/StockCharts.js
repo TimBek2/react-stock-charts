@@ -25,8 +25,9 @@ export default class StockCharts extends Component {
 
     return (
       <div>
+        <h1 className='header'>Stock Charts App</h1>
+
         <div className='content'>
-          <h1 className='header'>Stock Charts App</h1>
           <StockTickerForm
             handleSubmit={this.handleTickerSubmit}
             handleTickerUpdate={this.handleTickerUpdate}
