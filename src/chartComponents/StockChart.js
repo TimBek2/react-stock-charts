@@ -45,7 +45,6 @@ export default class StockChart extends Component {
         </div>
       )
     } else if(this.state.data.error) {
-      console.log(this.state.data.error)
       return (
         <div className='error-wrapper'>
           <p>There was a problem with that ticker</p>
